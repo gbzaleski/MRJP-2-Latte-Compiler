@@ -1,0 +1,71 @@
+
+void test1()
+{
+    string s;
+
+    if (s == "") 
+    {
+        printString("Pusty napis");
+    } 
+    else 
+    {
+        printString("Niepusty");
+    }
+}
+
+void test2()
+{
+    C c = new C;
+
+    if (c.s == "") 
+    {
+        printString("Pusty napis");
+    } 
+    else 
+    {
+        printString("Niepusty");
+    }
+
+    if (c.empty()) 
+    {
+        printString("Pusty napis");
+    } 
+    else 
+    {
+        printString("Niepusty");
+    }
+}
+
+void printBool(boolean b)
+{
+    if (b)
+        printString("true");
+    else 
+        printString("false");
+}
+
+class C 
+{
+    string s; 
+
+    boolean empty()
+    {
+        return s == "";
+    }
+}
+
+int main()
+{
+    test1();
+    test2();
+
+    C c = new C;
+    printInt(0);
+
+    c.empty();
+
+    C c2 = new C;
+    c.s = "";
+
+    return 0;
+}

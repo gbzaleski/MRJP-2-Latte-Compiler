@@ -1,0 +1,49 @@
+// Grzegorz B. Zaleski
+
+class pair
+{
+	int a;
+	pair next; 
+}
+
+
+int main()
+{
+	f();
+	return 2;
+}
+
+pair getPair()
+{
+	pair w = new pair;
+	w.a = 21;
+	return w;
+}
+
+void f()
+{
+	printInt(getPair().a);
+	printAttrPair(getPair());
+	printAttVal(getPair().a);
+	printInt((new pair).a);
+	printAttrPair(new pair);
+	printAttVal((new pair).a);
+	pair c = new pair;
+	c.a = 5;
+	printInt(c.a);
+	printAttrPair(c);
+	printAttVal(c.a);
+}
+
+void printAttrPair(pair p)
+{
+	printInt(p.a);
+}
+
+void printAttVal(int a)
+{
+	printInt(a);
+}
+
+
+

@@ -1,0 +1,13 @@
+class Base 
+{
+    void f(nonClass x)
+    {
+
+    }
+}
+
+int main()
+{
+    Base p = new Base;
+    return 0;
+}

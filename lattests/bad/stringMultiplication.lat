@@ -1,0 +1,5 @@
+int main() {
+  string a = "abc" * "def";
+  printString(a);
+  return 0;
+}

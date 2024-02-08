@@ -1,0 +1,7 @@
+int main() {
+  int[] a = new int[3];
+  a[1] = 3;
+  int x = a["trzy"];
+
+  return 0;
+}

@@ -1,0 +1,19 @@
+class Counter
+{
+    int val;
+
+    void update()
+    {
+       self.self.val++;
+    }
+}
+
+
+int main()
+{   
+    Counter c = new Counter;
+    c.update();
+    return 0;
+}
+
+

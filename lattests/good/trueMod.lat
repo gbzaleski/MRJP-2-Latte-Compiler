@@ -1,0 +1,9 @@
+int f() {
+    return 3;
+}
+
+int main() {
+    printInt(5 % f());
+    printInt(-5 % f()); // -2 - sic!
+    return 0;
+}

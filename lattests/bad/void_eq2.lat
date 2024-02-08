@@ -1,0 +1,9 @@
+void f() { }
+
+void g(int x) { }
+
+int main() {
+   if (f()==g(5))
+       printInt(0);
+   return 0;    
+} 

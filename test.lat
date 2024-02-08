@@ -1,0 +1,14 @@
+class Base 
+{
+   int val;
+}
+
+class Ext extends Base 
+{
+    int val2;
+}
+
+int main()
+{
+    return 0;
+}

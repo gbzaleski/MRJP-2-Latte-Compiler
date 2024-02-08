@@ -1,0 +1,33 @@
+class C 
+{
+    int p;
+
+    void f()
+    {
+        printString("Class print");
+    }
+}
+
+void test_assign() 
+{
+    (new C).p = 5;
+}
+
+
+void test_f()
+{
+    (new C).f();
+}
+
+int test_attr()
+{
+    return ((new C).p);
+}
+
+int main()
+{
+    test_assign();
+    test_f();
+    test_attr();
+    return 0;
+}

@@ -1,0 +1,24 @@
+
+class Base
+{
+    void f()
+    {
+
+    }
+
+    void f(int a)
+    {
+
+    }
+}
+
+
+int main()
+{
+    Base p = new Base;
+    return 0;
+}
+
+
+
+

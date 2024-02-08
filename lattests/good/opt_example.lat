@@ -1,0 +1,50 @@
+
+int main()
+{
+    printInt(f());
+    printInt(fib(5));
+    return 0;
+}
+
+int g()
+{
+    if (true)
+    {
+        int a = readInt();
+        return a;
+    }
+    return 5 + 10;
+}
+
+int fib(int n)
+{
+    if (n > 1)
+        return fib(n-1) + fib(n-2);
+    return 1;
+}
+
+int f()
+{
+    if (2 * 2 > 2)
+    {
+        return 20 + 30 * 2;
+        int a = 20;
+        a = a + 5;
+        return a + 10;
+    }
+    else 
+    {
+        int i = 5;
+        int p = 0;
+        while (i < 5)
+        {
+            p = p + i; 
+            i--;
+        }
+        return p;
+    }
+}
+
+
+
+

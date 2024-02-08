@@ -1,0 +1,8 @@
+int main() {
+    int[][] b;
+    int[] a = new int[1];
+    b[0]=a;
+    printInt(a.length);
+    printInt((new int[1]).length);
+    return 0;
+}

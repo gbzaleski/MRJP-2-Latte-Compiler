@@ -1,0 +1,44 @@
+class C 
+{
+    int a,b;
+    string s;
+    boolean w; 
+}
+
+class Ext extends C 
+{
+    boolean empty()
+    {
+        return s == "";
+    }
+}
+
+void test2()
+{
+    Ext c = new Ext;
+
+    if (c.s == "") 
+    {
+        printString("Pusty napis");
+    } 
+    else 
+    {
+        printString("Niepusty");
+    }
+
+    if (c.empty()) 
+    {
+        printString("Pusty napis");
+    } 
+    else 
+    {
+        printString("Niepusty");
+    }
+}
+
+int main()
+{
+    test2();
+
+    return 0;
+}

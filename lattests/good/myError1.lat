@@ -1,0 +1,8 @@
+int main()
+{
+  if ("ala"=="ela")
+    printString("Rowne?");
+  else
+    printString("Nierowne.");
+  return 0;
+}

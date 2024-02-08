@@ -1,0 +1,16 @@
+class C 
+{
+    int p;
+
+    void f()
+    {
+        printString("Class print");
+    }
+}
+
+int main()
+{
+   int r = ((C)null).p;
+
+   return r;
+}

@@ -1,0 +1,7 @@
+int c(int a, int b, int a) {
+  return a + b;
+}
+
+int main() {
+  return c(1, 1, 0);
+}

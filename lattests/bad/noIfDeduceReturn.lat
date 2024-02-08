@@ -1,0 +1,8 @@
+int main() {
+  return f(3); 
+}
+
+int f(int x) {
+  if (x < 0) /* Can't deduce x because I treat args as dynamic values */
+    return x; /* So in the end i throw error cause return is not guaranteed */
+}

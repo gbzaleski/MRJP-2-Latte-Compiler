@@ -1,0 +1,17 @@
+boolean once()
+{
+    printString("Should print once!");
+    return true;
+}
+
+
+int main()
+{
+    if (once() || once())
+    {
+        printString("done!");
+    }
+
+    return 0;
+}
+

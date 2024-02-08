@@ -1,0 +1,21 @@
+int main(){
+ int x;
+ x = f();
+ return 0;
+}
+
+int f() {
+  int a = 3333;
+  int b;
+  int c;
+
+  c = 5555;
+  c = c+1;
+  b = c;
+  c = 7777;
+  a = b;
+  c = 9999;
+  printInt(c);
+
+  return c;
+}

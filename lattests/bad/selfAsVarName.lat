@@ -1,0 +1,14 @@
+class SomeClass {
+  int a;
+
+  int b() {
+    int self = 0;
+    return self;
+  }
+}
+
+int main() {
+  SomeClass x = new SomeClass;
+
+  return 0;
+}

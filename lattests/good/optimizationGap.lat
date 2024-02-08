@@ -1,0 +1,12 @@
+int b() {
+  return 3;
+}
+
+int main() {
+
+  int i = b();
+  int x = 1 + 1 + i + 2 + 2; /* For me it optimizes to i + 6 */
+  printInt(x);
+
+  return 0;
+}

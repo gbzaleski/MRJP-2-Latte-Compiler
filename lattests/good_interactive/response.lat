@@ -1,0 +1,56 @@
+// Grzegorz B. Zaleski
+
+class State
+{
+    string mess;
+    int val;
+    Reader r;
+
+    void init()
+    {
+        r = new Reader;
+    }
+
+    void load()
+    {
+        mess = r.readMessage();
+    }
+
+    void run()
+    {
+        val = r.readInt();
+        runcl(val);
+    }
+
+    void runcl(int i)
+    {
+        if (i > 0)
+        {
+            printString(mess);
+            runcl(i-1);
+        }
+    }
+}
+
+class Reader
+{
+    int readInt()
+    {
+        return readInt();
+    }
+
+    string readMessage()
+    {
+        return readString();
+    }
+}
+
+
+int main()
+{
+    State st = new State;
+    st.init();
+    st.load();
+    st.run();
+    return 0;
+}

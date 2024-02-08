@@ -1,0 +1,34 @@
+// Grzegorz B. Zaleski
+
+class withPair
+{
+	pair child;
+	int ind;
+}
+
+int main()
+{
+	withPair wp;
+	wp = new withPair;
+	pair w = new pair;
+	w.message = "connect ";
+	wp.child = w;	
+	test(wp.ind, wp.child.message);
+	printInt(test(10, w.message + "mid- "));
+	return 0;
+}
+
+
+int test(int a, string w)
+{
+	printString(w + "test");
+	return 5 + a;
+}
+
+class pair
+{
+	int a,w;
+	pair next; 
+	string message;
+}
+

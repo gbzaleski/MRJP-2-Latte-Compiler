@@ -1,0 +1,7 @@
+void f() { }
+
+int main() {
+   if (f()==f())
+       printInt(0);
+   return 0;    
+} 

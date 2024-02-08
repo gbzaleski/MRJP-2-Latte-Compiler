@@ -1,0 +1,19 @@
+class int {
+  int a;
+}
+
+class bool {
+  int a;
+}
+
+class string {
+  int a;
+}
+
+int main() {
+  int a = new int();
+  string b = new string();
+  bool c = new bool();
+
+  return 0;
+}

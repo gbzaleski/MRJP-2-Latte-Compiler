@@ -1,0 +1,76 @@
+
+class Base 
+{
+	int a;
+
+	int f()
+	{
+		return 2;
+	}
+}
+
+int main()
+{
+	// celowo w srodku 
+	Base bib = new Base;
+	Extended ex = new Extended;
+	Overextended over = new Overextended;
+
+	printString("===== Base ====");
+	bib.a = 1;
+	printInt(bib.f());
+
+	printString("===== Extended ====");
+	ex.b = 20;
+	printInt(ex.f());
+	printString(ex.ex_fs());
+
+	printString("===== Overextended ====");
+	over.a = 101;
+	over.b = 102;
+	over.c = 103;
+
+	printInt(over.f());
+	printString(over.oex_fs(over.a - 5));
+
+	return 0;
+}
+
+class Overextended extends Extended
+{
+	int c;
+
+	int f()
+	{
+		printInt(a);
+		printInt(c);
+		printInt(b);
+		return 20;
+	}
+
+	string oex_fs(int i)
+	{
+		while(i < b)
+		{
+			i++;
+			printString("multiple-overexted");
+		}
+		return "done";
+	}
+}
+
+class Extended extends Base
+{
+	int b;
+	int f()
+	{
+		printString("Extended");
+		return 5;
+	}
+
+	string ex_fs()
+	{
+		printInt(b);
+		return "value-extended";
+	}
+}

@@ -1,0 +1,23 @@
+class Counter
+{
+    int val;
+
+    void update()
+    {
+       self.val++;
+    }
+}
+
+void f(Counter c) 
+{
+    c.self.val = 20;
+}
+
+int main()
+{
+    Counter c = new Counter;
+    f(c);
+    return 0;
+}
+
+

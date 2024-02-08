@@ -1,0 +1,9 @@
+class A {
+  int a;
+}
+
+int main() {
+  AA a = new AA;
+  
+  return 0;
+}

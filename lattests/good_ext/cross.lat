@@ -1,0 +1,96 @@
+// Grzegorz B. Zaleski
+
+class Base 
+{
+
+}
+
+class Ext extends Base 
+{
+
+}
+
+class hasBase
+{
+    Base localBase;
+}
+
+class hasExt
+{
+    Ext localExt;
+}
+
+class hasBoth 
+{
+    Base localBase;
+    Ext localExt;
+}
+
+Base getBase()
+{
+    return new Base;
+}
+
+Ext getExt()
+{
+    Ext e = new Ext;
+    return e;
+}
+
+Base retrieveBase(hasBase b)
+{
+    return b.localBase;
+}
+
+Ext retrieveExt(hasExt e)
+{
+    return e.localExt;
+}
+
+int main()
+{
+    Base b1 = new Base;
+    Base b2;
+    Base b3 = getBase();
+    Base b4 = new Ext;
+    Base b5 = getExt();
+    Base b6 = retrieveBase(new hasBase);
+    Base b7 = retrieveExt(new hasExt);
+    
+    Ext e1 = getExt();
+    Ext e2 = new Ext;
+    Ext e3 = retrieveExt(new hasExt);
+
+    b1 = new Base;
+    b2 = getBase();
+    b3 = new Ext;
+    b4 = getExt();
+    b5 = retrieveBase(new hasBase);
+    b6 = retrieveExt(new hasExt);
+    
+    hasBase br = new hasBase;
+    hasExt he = new hasExt;
+    b7 = br.localBase;
+    Base b8 = he.localExt;
+
+    hasBoth hb = new hasBoth;
+    hb.localBase = hb.localExt;
+
+    hb.localBase = new Base;
+    hb.localBase = (Base)null;
+    hb.localBase = getBase();
+    hb.localBase = new Ext;
+    hb.localBase = getExt();
+    hb.localBase = retrieveBase(new hasBase);
+    hb.localBase = retrieveExt(new hasExt);
+
+    e1 = hb.localExt;
+    e2 = retrieveExt(he);
+    e3 = new Ext;
+
+    printString("passed");
+
+    return 0;
+}
+
+

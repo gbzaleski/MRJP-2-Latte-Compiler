@@ -1,0 +1,8 @@
+// Author: Tomasz Wysocki 277696
+int main() {
+    if(true)
+        int a;
+
+    a = 2;
+    return 0;
+}

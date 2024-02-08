@@ -1,0 +1,26 @@
+int main() {
+
+  int i = 0;
+  printInt(i);
+  {
+    i = 1;
+    printInt(i);
+    int i = 2;
+    printInt(i);
+    {
+      i = 3;
+      printInt(i);
+      {
+        i = 5;
+        printInt(i);
+        int i = 6;
+        printInt(i);
+      }
+      printInt(i);
+    }
+    printInt(i);
+  }
+  printInt(i);
+
+  return 0;
+}

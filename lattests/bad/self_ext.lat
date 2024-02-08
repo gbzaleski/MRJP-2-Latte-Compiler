@@ -1,0 +1,15 @@
+
+
+class Base extends Base
+{
+	int b;
+}
+
+int main()
+{
+	Base p = new Base;
+	return 0;
+}
+
+
+

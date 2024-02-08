@@ -1,0 +1,11 @@
+
+
+void f(void x)
+{
+
+}
+
+int main()
+{
+   return 0;
+}

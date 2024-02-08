@@ -1,0 +1,144 @@
+// Grzegorz B. Zaleski
+
+class Base 
+{
+    int ab;
+
+    void f()
+    {
+        printString("test" + "base");
+    }
+
+    void b()
+    {
+        printString("normal function");
+    }
+}
+
+class Ext extends Base 
+{
+    int ae;
+    void f()
+    {
+        printString("test" + "ext");
+    }
+
+    string e()
+    {
+        string mess = "extended" + "-" + "function";
+        printString(mess);
+        return mess;
+    }  
+}
+
+class hasBase
+{
+    Base localBase;
+
+    void f()
+    {
+        printString("hb");
+    }
+}
+
+class hasExt
+{
+    Ext localExt;
+
+    void f()
+    {
+        printString("he");
+    }
+}
+
+class hasBoth 
+{
+    Base localBase;
+    Ext localExt;
+
+    void f()
+    {
+        printString("hbe");
+    }
+}
+
+Base getBase()
+{
+    return new Base;
+}
+
+Ext getExt()
+{
+    Ext e = new Ext;
+    return e;
+}
+
+Base retrieveBase(hasBase b)
+{
+    return b.localBase;
+}
+
+Ext retrieveExt(hasExt e)
+{
+    return e.localExt;
+}
+
+int main()
+{
+    Base b1 = new Base;
+    Base b2;
+    Base b3 = getBase();
+    Base b4 = new Ext;
+    Base b5 = getExt();
+    Base b6 = retrieveBase(new hasBase);
+    Base b7 = retrieveExt(new hasExt);
+    
+    Ext e1 = getExt();
+    Ext e2 = new Ext;
+    Ext e3 = retrieveExt(new hasExt);
+
+    b1 = new Base;
+    b2 = getBase();
+    b3 = new Ext;
+    b4 = getExt();
+    b5 = retrieveBase(new hasBase);
+    b6 = retrieveExt(new hasExt);
+    
+    hasBase br = new hasBase;
+    hasExt he = new hasExt;
+    b7 = br.localBase;
+    Base b8 = he.localExt;
+
+    hasBoth hb = new hasBoth;
+    hb.localBase = hb.localExt;
+
+    hb.localBase = new Base;
+    hb.localBase = (Base)null;
+    hb.localBase = getBase();
+    hb.localBase = new Ext;
+    hb.localBase = getExt();
+    hb.localBase = retrieveBase(new hasBase);
+    hb.localBase = retrieveExt(new hasExt);
+
+    e1 = hb.localExt;
+    e2 = retrieveExt(he);
+    e3 = new Ext;
+
+    printString("======= passed =====");
+
+    b1.f();
+    b2.b();
+
+    getBase().b();
+    getBase().f();
+
+    he.localExt = new Ext;
+    retrieveExt(he).f();
+    (new Ext).f();
+    getExt().f();
+    printString(getExt().e() + " <res");
+
+    printString("======= passed =====");
+
+    return 0;
+}

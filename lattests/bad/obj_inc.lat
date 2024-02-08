@@ -1,0 +1,15 @@
+class Counter
+{
+    int val;
+
+    void update()
+    {
+        val++;
+    }
+}
+
+int main()
+{
+    Counter c = new Counter;
+    c++;
+}

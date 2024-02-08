@@ -1,0 +1,14 @@
+class abc {
+  int a;
+  int b;
+  int c;
+}
+
+int abc(int a, int b, int c) {
+  return a + b + c;
+}
+
+int main() {
+  abc name = new abc;
+  return abc(1, 2, 3);
+}
