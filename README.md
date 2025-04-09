@@ -16,7 +16,7 @@ then
 ```
 
 ## Project content
- * Frontend typecheker
+ * Frontend typechecker
  * Base Latte compiler
  * Usage of `alloca` and `store` for variable allocation and value updating instead of `phi` function approach
  * Pooling string values
